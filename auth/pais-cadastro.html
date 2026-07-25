@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Ninho Pais e Responsáveis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo e Título -->
+            <div class="auth-header">
+                <img src="../img/ninho.png" alt="Ninho" class="auth-logo">
+                <h1>NINHO</h1>
+                <p>Cadastro para Pais e Responsáveis</p>
+            </div>
+
+            <!-- Formulário de Cadastro -->
+            <form id="form-cadastro-pais" class="auth-form">
+                <div class="form-group">
+                    <label for="nome-pais">👤 Seu Nome Completo</label>
+                    <input type="text" id="nome-pais" name="nome" required 
+                           pattern="[A-Za-zÀ-ÿ\s]{2,}" 
+                           title="Digite apenas letras (mínimo 2 caracteres)">
+                </div>
+
+                <div class="form-group">
+                    <label for="email-pais">📧 Email</label>
+                    <input type="email" id="email-pais" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone-pais">📞 Telefone</label>
+                    <input type="tel" id="telefone-pais" name="telefone" 
+                           placeholder="(11) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="parentesco">👪 Parentesco com a Criança</label>
+                    <select id="parentesco" name="parentesco" required>
+                        <option value="">Selecione</option>
+                        <option value="mae">Mãe</option>
+                        <option value="pai">Pai</option>
+                        <option value="avo">Avô/Avó</option>
+                        <option value="tio">Tio/Tia</option>
+                        <option value="responsavel">Responsável Legal</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha-pais">🔒 Senha</label>
+                    <input type="password" id="senha-pais" name="senha" required
+                           maxlength="12" minlength="6"
+                           pattern=".{6,12}"
+                           title="Senha deve ter entre 6 e 12 caracteres">
+                    <small>Máximo 12 caracteres</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar-senha-pais">✅ Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha-pais" name="confirmar-senha" required>
+                </div>
+
+                <button type="submit" class="btn-primary btn-large">Cadastrar</button>
+            </form>
+
+            <!-- Link para Login -->
+            <div class="auth-footer">
+                <p>Já tem uma conta? <a href="pais-login.html">Faça login aqui</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth-pais.js"></script>
+</body>
+</html>

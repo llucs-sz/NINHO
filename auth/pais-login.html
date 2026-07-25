@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ninho Pais e Responsáveis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo e Título -->
+            <div class="auth-header">
+                <img src="../img/ninho.png" alt="Ninho" class="auth-logo">
+                <h1>NINHO</h1>
+                <p>Acesso para Pais e Responsáveis</p>
+            </div>
+
+            <!-- Formulário de Login -->
+            <form id="form-login-pais" class="auth-form">
+                <div class="form-group">
+                    <label for="email-login">📧 Seu Email</label>
+                    <input type="email" id="email-login" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha-login">🔒 Senha</label>
+                    <input type="password" id="senha-login" name="senha" required>
+                </div>
+
+                <button type="submit" class="btn-primary btn-large">Entrar</button>
+            </form>
+
+            <!-- Link para Cadastro -->
+            <div class="auth-footer">
+                <p>É novo por aqui? <a href="pais-cadastro.html">Cadastre-se</a></p>
+                <p><a href="../introducao/index.html">← Voltar para o início</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth-pais.js"></script>
+</body>
+</html>

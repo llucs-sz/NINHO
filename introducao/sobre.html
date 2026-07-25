@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o NINHO | Apoio Psicológico</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1><i class="fas fa-dove"></i> NINHO</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html" class="active">Sobre</a>
+      <a href="../psicologia/psicologia.html">Psicólogos</a>
+      <a href="../pais/pais.html">Área da Família</a>
+      <a href="contato.html">Contato</a>
+      <a href="#" class="entrar" id="btn-entrar">Entrar</a>
+    </nav>
+  </header>
+
+
+    <!-- MODAL DE LOGIN -->
+  <div class="modal" id="modal-login">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h2>Acessar NINHO</h2>
+        <p>Escolha seu tipo de acesso</p>
+      </div>
+      <div class="login-options">
+        <div class="login-option" onclick="window.location.href='../auth/login.html'">
+          <div class="option-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <div class="option-content">
+            <h3>PSICÓLOGO</h3>
+            <p>Profissionais cadastrados na plataforma</p>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+       
+        <div class="login-option" onclick="window.location.href='../auth/pais-login.html'">
+          <div class="option-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="option-content">
+            <h3>RESPONSÁVEL</h3>
+            <p>Famílias e responsáveis por crianças e adolescentes</p>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Não tem uma conta? <a href="index.html" class="link-cadastro">Cadastre-se aqui</a></p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- HERO SOBRE -->
+  <section class="hero sobre-hero">
+    <div class="hero-content">
+      <h1>Um lugar seguro para <span class="highlight">curar e reconstruir</span></h1>
+      <p>Conheça a história por trás do NINHO e nossa missão de transformar vidas</p>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- NOSSA HISTÓRIA -->
+  <section class="section historia-section">
+    <div class="container">
+      <div class="historia-content">
+        <div class="historia-text">
+          <h2>Nossa <span class="gradient-text">Jornada</span></h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>O Início</h3>
+                <p>O NINHO nasceu como um projeto de TCC no Instituto Buussola Jovem, inspirado pela <strong>ODS 3 - Saúde e Bem-Estar</strong> da Agenda 2030 da ONU. Identificamos a saúde mental como uma área crucial que precisava de atenção especial.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>A Descoberta</h3>
+                <p>Em nossa pesquisa, nos deparamos com uma realidade alarmante: o <strong>abuso sexual infantil</strong> afeta milhares de crianças no Brasil, deixando marcas profundas que perduram pela vida toda quando não tratadas adequadamente.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker">
+                <i class="fas fa-dove"></i>
+              </div>
+              <div class="timeline-content">
+                <h3>O NINHO</h3>
+                <p>Criamos então uma plataforma que conecta <strong>vítimas e famílias</strong> a <strong>psicólogos especializados</strong>, oferecendo um espaço seguro, acolhedor e profissional para o processo de cura e reconstrução.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="historia-image">
+          <div class="image-card">
+            <img src="../img/ninho.png" alt="Símbolo NINHO" class="sobre-bird">
+            <div class="image-overlay">
+              <h4>Protegendo o Futuro</h4>
+              <p>Cada criança merece um ninho seguro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MISSÃO, VISÃO, VALORES -->
+  <section class="section valores-section">
+    <div class="container">
+      <h2>Nossos <span class="gradient-text">Pilares</span></h2>
+      <div class="valores-grid">
+        <div class="valor-card">
+          <div class="valor-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Missão</h3>
+          <p>Oferecer acolhimento psicológico especializado e acessível para vítimas de abuso sexual infantil e suas famílias, promovendo cura, resiliência e reconstrução de vidas.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Visão</h3>
+          <p>Ser a principal referência nacional em apoio psicológico para casos de abuso sexual infantil, criando uma rede de proteção que alcance todas as regiões do Brasil.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3>Valores</h3>
+          <ul>
+            <li><i class="fas fa-heart"></i> <strong>Empatia:</strong> Colocamos o ser humano em primeiro lugar</li>
+            <li><i class="fas fa-shield-alt"></i> <strong>Segurança:</strong> Garantimos total sigilo e proteção</li>
+            <li><i class="fas fa-hands-helping"></i> <strong>Acolhimento:</strong> Oferecemos um espaço livre de julgamentos</li>
+            <li><i class="fas fa-star"></i> <strong>Excelência:</strong> Trabalhamos apenas com profissionais qualificados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EQUIPE -->
+  <section class="section equipe-section">
+    <div class="container">
+      <h2>Conheça Nossa <span class="gradient-text">Equipe</span></h2>
+      <p class="section-subtitle">Jovens transformadores que acreditam no poder da empatia e da tecnologia</p>
+      <div class="equipe-grid">
+        <div class="membro-card">
+          <div class="membro-avatar">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Buussola Jovem</h3>
+          <p class="membro-cargo">Instituto Formador</p>
+          <p>Nosso berço educacional que nos proporcionou as ferramentas para transformar ideias em realidade.</p>
+        </div>
+        <div class="membro-card">
+          <div class="membro-avatar">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Time NINHO</h3>
+          <p class="membro-cargo">Equipe Multidisciplinar</p>
+          <p>Jovens dedicados unidos por um propósito comum: fazer a diferença na vida de quem mais precisa.</p>
+        </div>
+        <div class="membro-card">
+          <div class="membro-avatar">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3>Nossos Parceiros</h3>
+          <p class="membro-cargo">Rede de Apoio</p>
+          <p>Psicólogos especializados que dedicam seu tempo e expertise para acolher e transformar vidas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ODS 3 -->
+  <section class="section ods-section">
+    <div class="container">
+      <div class="ods-content">
+        <div class="ods-text">
+          <h2>Alinhados com a <span class="gradient-text">ODS 3</span></h2>
+          <p>Nosso trabalho está diretamente conectado com o <strong>Objetivo de Desenvolvimento Sustentável 3</strong> da ONU, que visa assegurar uma vida saudável e promover o bem-estar para todos, em todas as idades.</p>
+          <div class="ods-details">
+            <div class="ods-detail">
+              <i class="fas fa-brain"></i>
+              <span>Saúde Mental</span>
+            </div>
+            <div class="ods-detail">
+              <i class="fas fa-child"></i>
+              <span>Proteção Infantil</span>
+            </div>
+            <div class="ods-detail">
+              <i class="fas fa-stethoscope"></i>
+              <span>Acesso à Saúde</span>
+            </div>
+          </div>
+        </div>
+        <div class="ods-visual">
+          <div class="ods-logo">
+            <div class="ods-circle">3</div>
+            <p>SAÚDE E BEM-ESTAR</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- NOSSA PROMESSA -->
+  <section class="section promessa-section">
+    <div class="container">
+      <div class="promessa-content">
+        <h2>Nossa <span class="gradient-text">Promessa</span></h2>
+        <p class="promessa-text">Estamos construindo algo maior que uma plataforma - estamos criando uma <strong>rede de esperança</strong>. A cada psicólogo que se junta a nós, a cada família que busca ajuda, damos mais um passo na direção de um futuro onde <strong>nenhuma criança precise enfrentar a dor sozinha</strong>.</p>
+        <div class="promessa-features">
+          <div class="feature">
+            <i class="fas fa-lock"></i>
+            <h4>Sigilo Absoluto</h4>
+            <p>Seus dados e histórias estão protegidos conosco</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-certificate"></i>
+            <h4>Profissionais Verificados</h4>
+            <p>Todos os psicólogos passam por rigorosa seleção</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-heart"></i>
+            <h4>Acolhimento Genuíno</h4>
+            <p>Um espaço livre de julgamentos e cheio de empatia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Junte-se a Nossa <span class="gradient-text">Missão</span></h2>
+        <p>Seja parte dessa transformação. Juntos, podemos construir um futuro mais seguro e acolhedor para nossas crianças.</p>
+        <div class="cta-buttons">
+          <a href="cadastro-psicologo.html" class="btn-primary">
+            <i class="fas fa-user-md"></i>
+            Seja um Psicólogo Parceiro
+          </a>
+          <a href="agendar-sessao.html" class="btn-secondary">
+            <i class="fas fa-hands-helping"></i>
+            Buscar Ajuda
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3><i class="fas fa-dove"></i> NINHO</h3>
+          <p>Um lugar seguro para curar, reconstruir e renascer. Juntos na luta contra o abuso sexual infantil.</p>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Fique por dentro das novidades</h3>
+          <p>Receba informações sobre saúde mental e proteção infantil</p>
+          <div class="form">
+            <input type="email" placeholder="Seu e-mail">
+            <button>Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>NINHO   - Feito com amor pelo grupo da ODS 3💙</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Modal de Login (reutilizado da página inicial)
+    const modal = document.getElementById('modal-login');
+    const btn = document.getElementById('btn-entrar');
+    const span = document.getElementsByClassName('close')[0];
+
+
+    if (btn && modal && span) {
+      btn.onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+      }
+
+
+      span.onclick = function() {
+        modal.style.display = 'none';
+      }
+
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = 'none';
+        }
+      }
+    }
+  </script>
+
+
+</body>
+</html>

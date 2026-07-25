@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Sessão | NINHO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1><i class="fas fa-dove"></i> NINHO</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="../psicologia/psicologia.html">Psicólogos</a>
+      <a href="../pais/pais.html">Área da Família</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html" class="entrar">Entrar</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO AGENDAMENTO -->
+  <section class="hero agendar-hero">
+    <div class="hero-content">
+      <div class="agendar-icon">
+        <i class="fas fa-calendar-check"></i>
+      </div>
+      <h1>Agende Sua <span class="highlight">Sessão</span></h1>
+      <p>Encontre o psicólogo ideal e marque sua consulta de forma rápida, segura e acolhedora</p>
+    </div>
+  </section>
+
+
+  <!-- FORMULÁRIO DE AGENDAMENTO -->
+  <section class="section agendar-section">
+    <div class="container">
+      <div class="form-header">
+        <h2>Agendar Sessão</h2>
+        <p>Preencha os dados abaixo para agendar sua consulta</p>
+      </div>
+     
+      <form class="agendar-form">
+        <div class="form-grid">
+          <!-- Dados Pessoais -->
+          <div class="form-section">
+            <div class="section-header">
+              <i class="fas fa-user"></i>
+              <h3>Dados Pessoais</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome-paciente">
+                  <i class="fas fa-signature"></i>
+                  Nome Completo
+                </label>
+                <input type="text" id="nome-paciente" name="nome-paciente" required placeholder="Seu nome completo">
+              </div>
+            </div>
+           
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nascimento-paciente">
+                  <i class="fas fa-calendar"></i>
+                  Data de Nascimento
+                </label>
+                <input type="date" id="nascimento-paciente" name="nascimento-paciente" required>
+              </div>
+              <div class="form-group">
+                <label for="telefone-paciente">
+                  <i class="fas fa-phone"></i>
+                  Telefone
+                </label>
+                <input type="tel" id="telefone-paciente" name="telefone-paciente" required placeholder="(11) 99999-9999">
+              </div>
+            </div>
+           
+            <div class="form-row">
+              <div class="form-group full-width">
+                <label for="email-paciente">
+                  <i class="fas fa-envelope"></i>
+                  E-mail
+                </label>
+                <input type="email" id="email-paciente" name="email-paciente" required placeholder="seu.email@exemplo.com">
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Dados da Consulta -->
+          <div class="form-section">
+            <div class="section-header">
+              <i class="fas fa-calendar-alt"></i>
+              <h3>Dados da Consulta</h3>
+            </div>
+
+
+            <div class="form-group full-width">
+              <label for="tipo-consulta">
+                <i class="fas fa-stethoscope"></i>
+                Tipo de Atendimento
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="tipo-consulta" value="primeira-vez" required>
+                  <span class="radio-checkmark"></span>
+                  <div class="radio-content">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Primeira Consulta</span>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="tipo-consulta" value="retorno">
+                  <span class="radio-checkmark"></span>
+                  <div class="radio-content">
+                    <i class="fas fa-redo"></i>
+                    <span>Consulta de Retorno</span>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="tipo-consulta" value="emergencia">
+                  <span class="radio-checkmark"></span>
+                  <div class="radio-content">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Atendimento de Emergência</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="psicologo">
+                  <i class="fas fa-user-md"></i>
+                  Selecione o Psicólogo
+                </label>
+                <select id="psicologo" name="psicologo" required>
+                  <option value="">Selecione um profissional</option>
+                  <option value="dra-silva">Dra. Maria Silva - Psicologia Infantil</option>
+                  <option value="dr-santos">Dr. João Santos - Psicologia Clínica</option>
+                  <option value="dra-oliveira">Dra. Ana Oliveira - Psicologia Escolar</option>
+                  <option value="dr-costa">Dr. Pedro Costa - Psicologia Hospitalar</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="data-consulta">
+                  <i class="fas fa-calendar-day"></i>
+                  Data Preferencial
+                </label>
+                <input type="date" id="data-consulta" name="data-consulta" required>
+              </div>
+              <div class="form-group">
+                <label for="horario-consulta">
+                  <i class="fas fa-clock"></i>
+                  Horário Preferencial
+                </label>
+                <select id="horario-consulta" name="horario-consulta" required>
+                  <option value="">Selecione um horário</option>
+                  <option value="manha">Manhã (8h-12h)</option>
+                  <option value="tarde">Tarde (13h-17h)</option>
+                  <option value="noite">Noite (18h-21h)</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-group full-width">
+              <label for="observacoes">
+                <i class="fas fa-comment"></i>
+                Observações (Opcional)
+              </label>
+              <textarea id="observacoes" name="observacoes" rows="3" placeholder="Alguma informação adicional que considere importante"></textarea>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Botão -->
+        <div class="form-actions">
+          <button type="submit" class="btn-primary btn-large btn-submit">
+            <i class="fas fa-calendar-check"></i>
+            Confirmar Agendamento
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- INFORMAÇÕES IMPORTANTES -->
+  <section class="section info-section">
+    <div class="container">
+      <h2>Informações Importantes</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h4>Confirmação do Agendamento</h4>
+          <p>Você receberá uma confirmação por e-mail em até 24 horas com os detalhes da sua consulta.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h4>Modalidades de Atendimento</h4>
+          <p>Oferecemos sessões presenciais e online, de acordo com sua preferência e necessidade.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h4>Privacidade Garantida</h4>
+          <p>Todas as sessões são sigilosas e protegidas por nossa política de privacidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3><i class="fas fa-dove"></i> NINHO</h3>
+          <p>Um lugar seguro para curar, reconstruir e renascer. Juntos na luta contra o abuso sexual infantil.</p>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Fique por dentro das novidades</h3>
+          <p>Receba informações sobre saúde mental e proteção infantil</p>
+          <div class="form">
+            <input type="email" placeholder="Seu e-mail">
+            <button>Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>NINHO   - Feito com amor pelo grupo da ODS 3💙</p>
+      </div>
+    </div>
+  </footer>
+
+
+    <script src="agendar-sessao.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

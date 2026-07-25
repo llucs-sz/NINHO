@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área da Família | NINHO</title>
+  <link rel="stylesheet" href="pais.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- CABEÇALHO -->
+  <header>
+    <h1><i class="fas fa-dove"></i> NINHO</h1>
+    <nav>
+      <a href="../introducao/index.html">Início</a>
+      <a href="../introducao/sobre.html">Sobre</a>
+      <a href="../psicologia/psicologia.html">Psicólogos</a>
+      <a href="#" class="active">Área da Família</a>
+      <a href="../contato.html">Contato</a>
+      <a href="#" class="entrar" id="btn-entrar">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- MODAL DE LOGIN -->
+  <div class="modal" id="modal-login">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h2>Acessar NINHO</h2>
+        <p>Escolha seu tipo de acesso</p>
+      </div>
+      <div class="login-options">
+        <div class="login-option" onclick="window.location.href='../auth/login.html'">
+          <div class="option-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <div class="option-content">
+            <h3>PSICÓLOGO</h3>
+            <p>Profissionais cadastrados na plataforma</p>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+        
+        <div class="login-option" onclick="window.location.href='../auth/pais-login.html'">
+          <div class="option-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="option-content">
+            <h3>RESPONSÁVEL</h3>
+            <p>Famílias e responsáveis por crianças e adolescentes</p>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Não tem uma conta? <a href="../introducao/index.html" class="link-cadastro">Cadastre-se aqui</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero pais-hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="../img/ninho.png" alt="Ninho" class="ninho-img">
+      </div>
+      <h1>Área da <span class="highlight">Família</span></h1>
+      <p>Um espaço seguro para cuidar, aprender e proteger</p>
+    </div>
+  </section>
+
+  <!-- MENU DE NAVEGAÇÃO INTERNA -->
+  <section class="section menu-section">
+    <div class="container">
+      <div class="menu-grid">
+        <button class="menu-card nav-btn active" onclick="showSection('educacao')">
+          <div class="menu-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Educação e Informação</h3>
+          <p>Conteúdo educativo sobre proteção infantil</p>
+        </button>
+        
+        <button class="menu-card nav-btn" onclick="showSection('agendamento')">
+          <div class="menu-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3>Agendamento</h3>
+          <p>Gerencie sessões com psicólogos</p>
+        </button>
+        
+        <button class="menu-card nav-btn" onclick="showSection('comunicacao')">
+          <div class="menu-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Comunicação</h3>
+          <p>Fale com os profissionais com segurança</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO EDUCAÇÃO E INFORMAÇÃO -->
+  <section id="educacao" class="content-section active">
+    <div class="container">
+      <div class="section-header">
+        <h2>Educação e <span class="gradient-text">Informação</span></h2>
+        <p>Conteúdo educativo para proteger e orientar sua família</p>
+      </div>
+      
+      <div class="educacao-grid">
+        <div class="educacao-card" onclick="openArticle('comunicacao')">
+          <div class="card-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Comunicação Não-Violenta</h3>
+          <p>Aprenda a estabelecer diálogo eficaz com crianças e adolescentes</p>
+          <span class="card-link">Ler Artigo</span>
+        </div>
+        
+        <div class="educacao-card" onclick="openArticle('sinais')">
+          <div class="card-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3>Identificando Sinais</h3>
+          <p>Guia completo sobre sinais comportamentais e emocionais</p>
+          <span class="card-link">Ler Artigo</span>
+        </div>
+        
+        <div class="educacao-card" onclick="openArticle('prevencao')">
+          <div class="card-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Prevenção e Proteção</h3>
+          <p>Estratégias práticas para proteger crianças e adolescentes</p>
+          <span class="card-link">Ler Artigo</span>
+        </div>
+        
+        <div class="educacao-card" onclick="openArticle('acolhimento')">
+          <div class="card-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Técnicas de Acolhimento</h3>
+          <p>Como oferecer suporte emocional adequado</p>
+          <span class="card-link">Ler Artigo</span>
+        </div>
+        
+        <div class="educacao-card" onclick="openArticle('trauma')">
+          <div class="card-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>Entendendo o Trauma</h3>
+          <p>Como a psicoterapia pode ajudar no processo de cura</p>
+          <span class="card-link">Ler Artigo</span>
+        </div>
+        
+        <div class="educacao-card" onclick="openArticle('regulacao')">
+          <div class="card-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Regulação Emocional</h3>
+          <p>Como criar um ambiente seguro e acolhedor em casa</p>
+          <span class="card-link">Ler Artigo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO AGENDAMENTO -->
+  <section id="agendamento" class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agendamento de <span class="gradient-text">Sessões</span></h2>
+        <p>Gerencie as consultas do seu filho de forma simples e segura</p>
+      </div>
+      
+      <div class="agendamento-content">
+        <div class="agendamento-info">
+          <div class="info-card">
+            <h3><i class="fas fa-calendar-alt"></i> Próximas Sessões</h3>
+            <div class="sessao-item">
+              <div class="sessao-data">
+                <span class="dia">15</span>
+                <span class="mes">NOV</span>
+              </div>
+              <div class="sessao-detalhes">
+                <h4>Dra. Maria Silva</h4>
+                <p>14:00 - 15:00 | Online</p>
+              </div>
+              <button class="btn-acao" onclick="viewChildProfile('P001')">Detalhes</button>
+            </div>
+            
+            <div class="sessao-item">
+              <div class="sessao-data">
+                <span class="dia">18</span>
+                <span class="mes">NOV</span>
+              </div>
+              <div class="sessao-detalhes">
+                <h4>Dr. João Santos</h4>
+                <p>10:00 - 11:00 | Presencial</p>
+              </div>
+              <button class="btn-acao" onclick="viewChildProfile('P002')">Detalhes</button>
+            </div>
+          </div>
+          
+          <div class="info-card">
+            <h3><i class="fas fa-plus-circle"></i> Nova Sessão</h3>
+            <p>Agende uma consulta com um de nossos psicólogos especializados</p>
+            <button class="btn-primary" onclick="scheduleSession()">
+              <i class="fas fa-calendar-plus"></i>
+              Agendar Consulta
+            </button>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-child"></i> Gerenciar Crianças</h3>
+            <p>Adicione ou edite informações das crianças sob sua responsabilidade</p>
+            <button class="btn-secondary" onclick="addChild()">
+              <i class="fas fa-user-plus"></i>
+              Adicionar Criança
+            </button>
+          </div>
+        </div>
+        
+        <div class="agendamento-calendario">
+          <div class="calendario-header">
+            <h4>Novembro 2024</h4>
+          </div>
+          <div class="calendario-grid">
+            <div class="calendario-dia">Dom</div>
+            <div class="calendario-dia">Seg</div>
+            <div class="calendario-dia">Ter</div>
+            <div class="calendario-dia">Qua</div>
+            <div class="calendario-dia">Qui</div>
+            <div class="calendario-dia">Sex</div>
+            <div class="calendario-dia">Sáb</div>
+            
+            <!-- Dias do mês -->
+            <div class="calendario-data vazio"></div>
+            <div class="calendario-data vazio"></div>
+            <div class="calendario-data">1</div>
+            <div class="calendario-data">2</div>
+            <div class="calendario-data">3</div>
+            <div class="calendario-data">4</div>
+            <div class="calendario-data">5</div>
+            <div class="calendario-data">6</div>
+            <div class="calendario-data">7</div>
+            <div class="calendario-data">8</div>
+            <div class="calendario-data">9</div>
+            <div class="calendario-data">10</div>
+            <div class="calendario-data">11</div>
+            <div class="calendario-data">12</div>
+            <div class="calendario-data">13</div>
+            <div class="calendario-data">14</div>
+            <div class="calendario-data com-sessao">15</div>
+            <div class="calendario-data">16</div>
+            <div class="calendario-data">17</div>
+            <div class="calendario-data com-sessao">18</div>
+            <div class="calendario-data">19</div>
+            <div class="calendario-data">20</div>
+            <div class="calendario-data">21</div>
+            <div class="calendario-data">22</div>
+            <div class="calendario-data">23</div>
+            <div class="calendario-data">24</div>
+            <div class="calendario-data">25</div>
+            <div class="calendario-data">26</div>
+            <div class="calendario-data">27</div>
+            <div class="calendario-data">28</div>
+            <div class="calendario-data">29</div>
+            <div class="calendario-data">30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO COMUNICAÇÃO -->
+  <section id="comunicacao" class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Comunicação <span class="gradient-text">Segura</span></h2>
+        <p>Entre em contato com os profissionais de forma protegida</p>
+      </div>
+      
+      <div class="comunicacao-content">
+        <div class="mensagens-list">
+          <h3>Conversas Recentes</h3>
+          <div class="mensagem-item" onclick="contactPsychologist()">
+            <div class="mensagem-avatar">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <div class="mensagem-content">
+              <h4>Dra. Maria Silva</h4>
+              <p>Gostaria de combinar alguns detalhes para a próxima sessão...</p>
+              <span class="mensagem-time">Hoje, 14:30</span>
+            </div>
+          </div>
+          
+          <div class="mensagem-item" onclick="contactPsychologist()">
+            <div class="mensagem-avatar">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <div class="mensagem-content">
+              <h4>Dr. João Santos</h4>
+              <p>O relatório da última sessão está disponível...</p>
+              <span class="mensagem-time">Ontem, 09:15</span>
+            </div>
+          </div>
+
+          <div class="nova-mensagem">
+            <button class="btn-primary" onclick="contactPsychologist()">
+              <i class="fas fa-plus"></i>
+              Nova Mensagem
+            </button>
+          </div>
+        </div>
+        
+        <div class="comunicacao-info">
+          <div class="info-card">
+            <h3><i class="fas fa-lock"></i> Comunicação Segura</h3>
+            <p>Todas as mensagens são criptografadas e protegidas por sigilo profissional</p>
+            <ul class="feature-list">
+              <li><i class="fas fa-check"></i> Sigilo absoluto garantido</li>
+              <li><i class="fas fa-check"></i> Resposta em até 24h</li>
+              <li><i class="fas fa-check"></i> Arquivos protegidos</li>
+            </ul>
+          </div>
+          
+          <div class="info-card">
+            <h3><i class="fas fa-chart-line"></i> Acompanhamento</h3>
+            <p>Acompanhe o progresso e evolução do tratamento</p>
+            <button class="btn-secondary" onclick="openProgress()">
+              <i class="fas fa-chart-bar"></i>
+              Ver Progresso
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO APOIO IMEDIATO -->
+  <section id="emergencia" class="content-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Apoio <span class="gradient-text">Imediato</span></h2>
+        <p>Recursos essenciais para situações de emergência</p>
+      </div>
+      
+      <div class="emergencia-grid">
+        <div class="emergencia-card emergencia" onclick="openEmergency('disque100')">
+          <div class="card-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Disque Denúncia</h3>
+          <p class="numero-emergencia">Disque 100</p>
+          <p>Serviço de proteção de crianças e adolescentes com foco em direitos humanos</p>
+        </div>
+        
+        <div class="emergencia-card conselho" onclick="openEmergency('conselho')">
+          <div class="card-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Conselho Tutelar</h3>
+          <p class="numero-emergencia">Encontre o mais próximo</p>
+          <p>Órgão responsável por zelar pelos direitos das crianças e adolescentes</p>
+        </div>
+        
+        <div class="emergencia-card policia" onclick="openEmergency('policia')">
+          <div class="card-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Polícia Especializada</h3>
+          <p class="numero-emergencia">190 ou Delegacias</p>
+          <p>Delegacias especializadas no atendimento a crianças e adolescentes</p>
+        </div>
+        
+        <div class="emergencia-card crise" onclick="openEmergency('cvv')">
+          <div class="card-icon">
+            <i class="fas fa-life-ring"></i>
+          </div>
+          <h3>Apoio em Crise</h3>
+          <p class="numero-emergencia">CVV - 188</p>
+          <p>Atendimento 24h para apoio emocional e prevenção do suicídio</p>
+        </div>
+      </div>
+      
+      <div class="emergencia-aviso">
+        <div class="aviso-content">
+          <i class="fas fa-exclamation-triangle"></i>
+          <div>
+            <h4>Importante</h4>
+            <p>Em caso de emergência ou perigo iminente, entre em contato imediatamente com as autoridades. Não hesite em buscar ajuda.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="recursos-adicionais">
+        <h3>Recursos Adicionais</h3>
+        <div class="recursos-grid">
+          <div class="recurso-card" onclick="openResource('grupos')">
+            <h3><i class="fas fa-user-friends"></i> Grupos de Apoio</h3>
+            <p>Encontre outros pais e responsáveis para troca de experiências</p>
+            <span class="card-link">Participar</span>
+          </div>
+          
+          <div class="recurso-card" onclick="openResource('materiais')">
+            <h3><i class="fas fa-file-pdf"></i> Materiais para Download</h3>
+            <p>Cartilhas, guias e materiais educativos para proteção infantil</p>
+            <span class="card-link">Acessar</span>
+          </div>
+          
+          <div class="recurso-card" onclick="openResource('cuidador')">
+            <h3><i class="fas fa-heartbeat"></i> Cuidado com o Cuidador</h3>
+            <p>Recursos e indicações para o autocuidado dos responsáveis</p>
+            <span class="card-link">Conhecer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL PARA CONTEÚDO -->
+  <div id="actionModal" class="modal">
+    <div class="modal-content modal-lg">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3><i class="fas fa-dove"></i> NINHO</h3>
+          <p>Um lugar seguro para curar, reconstruir e renascer. Juntos na luta contra o abuso sexual infantil.</p>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Fique por dentro das novidades</h3>
+          <p>Receba informações sobre saúde mental e proteção infantil</p>
+          <div class="form">
+            <input type="email" placeholder="Seu e-mail">
+            <button>Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>NINHO   - Feito com amor pelo grupo da ODS 3💙</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pais.js"></script>
+</body>
+</html>

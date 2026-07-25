@@ -1,0 +1,265 @@
+/* ---------- GERAL ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0a1e4f, #0d3d86);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ---------- TOPO ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  padding: 10px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 8px 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00b4ff;
+}
+
+.entrar {
+  background: #00b4ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ---------- MODAL DE LOGIN ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--branco);
+  margin: 10% auto;
+  padding: 0;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.3s;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-lg {
+  max-width: 800px;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.login-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3f5f9;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-option:hover {
+  background: #e0ecff;
+  transform: scale(1.02);
+}
+
+.option-icon i {
+  font-size: 2rem;
+  color: #0d3d86;
+}
+
+.option-content h3 {
+  margin: 0;
+  color: #0d3d86;
+}
+
+.option-content p {
+  margin: 3px 0 0;
+  font-size: 0.9rem;
+}
+
+.arrow {
+  color: #0d3d86;
+  font-size: 1.3rem;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.modal-footer a {
+  color: #0d3d86;
+  font-weight: 600;
+}
+
+/* ---------- CONTEÚDO PRINCIPAL ---------- */
+.dashboard {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.welcome-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #0d3d86;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  color: #0d3d86;
+}
+
+/* ---------- SEÇÃO DINÂMICA ---------- */
+.dashboard-section {
+  margin-top: 40px;
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.dashboard-section h2 {
+  color: #00b4ff;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 800px) {
+  .cards-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin-top: 20%;
+  }
+
+  .dashboard {
+    padding: 30px 10px;
+  }
+
+  .dashboard-section {
+    padding: 20px;
+  }
+}

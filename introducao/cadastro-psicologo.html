@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Psicólogo | NINHO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1><i class="fas fa-dove"></i> NINHO</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="../psicologia/psicologia.html">Psicólogos</a>
+      <a href="../pais/pais.html">Área da Família</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html" class="entrar">Entrar</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO CADASTRO -->
+  <section class="hero cadastro-hero">
+    <div class="hero-content">
+      <div class="cadastro-icon">
+        <i class="fas fa-user-md"></i>
+      </div>
+      <h1>Junte-se à Nossa <span class="highlight">Rede de Apoio</span></h1>
+      <p>Faça parte do NINHO e ajude a transformar vidas através do acolhimento psicológico especializado</p>
+    </div>
+  </section>
+
+
+  <!-- FORMULÁRIO DE CADASTRO -->
+  <section class="section cadastro-section">
+    <div class="container">
+      <div class="form-header">
+        <h2>Cadastro de Psicólogo</h2>
+        <p>Preencha os dados abaixo para se tornar um parceiro NINHO</p>
+      </div>
+     
+      <form class="cadastro-form">
+        <div class="form-grid">
+          <!-- Dados Pessoais -->
+          <div class="form-section">
+            <div class="section-header">
+              <i class="fas fa-user"></i>
+              <h3>Dados Pessoais</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">
+                  <i class="fas fa-signature"></i>
+                  Nome Completo
+                </label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+              </div>
+            </div>
+           
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nascimento">
+                  <i class="fas fa-calendar"></i>
+                  Data de Nascimento
+                </label>
+                <input type="date" id="nascimento" name="nascimento" required>
+              </div>
+              <div class="form-group">
+                <label for="telefone">
+                  <i class="fas fa-phone"></i>
+                  Telefone
+                </label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+              </div>
+            </div>
+           
+            <div class="form-row">
+              <div class="form-group full-width">
+                <label for="email">
+                  <i class="fas fa-envelope"></i>
+                  E-mail
+                </label>
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Dados Profissionais -->
+          <div class="form-section">
+            <div class="section-header">
+              <i class="fas fa-briefcase"></i>
+              <h3>Dados Profissionais</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="crp">
+                  <i class="fas fa-id-card"></i>
+                  Registro CRP
+                </label>
+                <input type="text" id="crp" name="crp" required placeholder="Ex: 05/12345">
+                <small>Formato: XX/XXXXX</small>
+              </div>
+              <div class="form-group">
+                <label for="especialidade">
+                  <i class="fas fa-star"></i>
+                  Especialidade Principal
+                </label>
+                <select id="especialidade" name="especialidade" required>
+                  <option value="">Selecione sua especialidade</option>
+                  <option value="infantil">Psicologia Infantil</option>
+                  <option value="clinica">Psicologia Clínica</option>
+                  <option value="escolar">Psicologia Escolar</option>
+                  <option value="hospitalar">Psicologia Hospitalar</option>
+                  <option value="forense">Psicologia Forense</option>
+                  <option value="outra">Outra</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-group full-width">
+              <label for="formacao">
+                <i class="fas fa-graduation-cap"></i>
+                Formação Acadêmica
+              </label>
+              <textarea id="formacao" name="formacao" rows="3" placeholder="Descreva sua formação, cursos e especializações"></textarea>
+            </div>
+
+
+            <div class="form-group full-width">
+              <label for="experiencia">
+                <i class="fas fa-briefcase"></i>
+                Experiência Profissional
+              </label>
+              <textarea id="experiencia" name="experiencia" rows="3" placeholder="Descreva sua experiência profissional relevante"></textarea>
+            </div>
+
+
+            <div class="form-group full-width">
+              <label for="abordagem">
+                <i class="fas fa-brain"></i>
+                Abordagem Terapêutica
+              </label>
+              <textarea id="abordagem" name="abordagem" rows="3" placeholder="Descreva sua abordagem psicológica principal"></textarea>
+            </div>
+          </div>
+
+
+          <!-- Segurança -->
+          <div class="form-section">
+            <div class="section-header">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Segurança</h3>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senha">
+                  <i class="fas fa-lock"></i>
+                  Senha
+                </label>
+                <input type="password" id="senha" name="senha" required>
+                <small>Mínimo 6 caracteres</small>
+              </div>
+              <div class="form-group">
+                <label for="confirmar-senha">
+                  <i class="fas fa-lock"></i>
+                  Confirmar Senha
+                </label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Termos -->
+        <div class="termos-section">
+          <div class="checkbox-group">
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">
+              Concordo com os <a href="#" class="link-termos">Termos de Uso</a> e <a href="#" class="link-termos">Política de Privacidade</a> do NINHO
+            </label>
+          </div>
+        </div>
+
+
+        <!-- Botão -->
+        <div class="form-actions">
+          <button type="submit" class="btn-primary btn-large btn-submit">
+            <i class="fas fa-user-plus"></i>
+            Cadastrar como Parceiro
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- BENEFÍCIOS -->
+  <section class="section beneficios-section">
+    <div class="container">
+      <h2>Vantagens de Ser um Psicólogo NINHO</h2>
+      <div class="beneficios-grid">
+        <div class="beneficio-card">
+          <div class="beneficio-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Pacientes que Precisam</h4>
+          <p>Conecte-se com pessoas que realmente necessitam do seu atendimento especializado</p>
+        </div>
+        <div class="beneficio-card">
+          <div class="beneficio-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h4>Agenda Organizada</h4>
+          <p>Sistema de agendamento integrado que facilita o gerenciamento da sua rotina</p>
+        </div>
+        <div class="beneficio-card">
+          <div class="beneficio-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4>Ambiente Seguro</h4>
+          <p>Plataforma desenvolvida com foco total na segurança e privacidade dos dados</p>
+        </div>
+  </section>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3><i class="fas fa-dove"></i> NINHO</h3>
+          <p>Um lugar seguro para curar, reconstruir e renascer. Juntos na luta contra o abuso sexual infantil.</p>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Fique por dentro das novidades</h3>
+          <p>Receba informações sobre saúde mental e proteção infantil</p>
+          <div class="form">
+            <input type="email" placeholder="Seu e-mail">
+            <button>Inscrever-se</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>NINHO   - Feito com amor pelo grupo da ODS 3💙</p>
+      </div>
+    </div>
+  </footer>
+
+
+    <script src="cadastro-psicologo.js"></script>
+
+
+</body>
+</html>
+
+

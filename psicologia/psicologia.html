@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área da Psicologia | NINHO</title>
+  <link rel="stylesheet" href="psicologia.css">
+  <script src="https://kit.fontawesome.com/a2d9d5a32b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="../img/ninho.png" alt="NINHO">
+      <h1>NINHO</h1>
+    </div>
+    <nav>
+      <a href="../introducao/index.html">Início</a>
+      <a href="../introducao/sobre.html">Sobre</a>
+      <a href="../pais/pais.html">Área da Família</a>
+      <a href="../contato.html">Contato</a>
+      <a href="#" class="entrar" id="btn-entrar">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- MODAL DE LOGIN -->
+  <div class="modal" id="modal-login">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <h2>Acessar NINHO</h2>
+        <p>Escolha seu tipo de acesso</p>
+      </div>
+      <div class="login-options">
+        <div class="login-option" onclick="window.location.href='../auth/login.html'">
+          <div class="option-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <div class="option-content">
+            <h3>PSICÓLOGO</h3>
+            <p>Profissionais cadastrados na plataforma</p>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+        
+        <div class="login-option" onclick="window.location.href='../auth/pais-login.html'">
+          <div class="option-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="option-content">
+            <h3>RESPONSÁVEL</h3>
+            <p>Famílias e responsáveis por crianças e adolescentes</p>
+          </div>
+          <i class="fas fa-chevron-right arrow"></i>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>Não tem uma conta? <a href="../introducao/index.html" class="link-cadastro">Cadastre-se aqui</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="dashboard">
+    <section class="welcome-section">
+      <h2>Bem-vindo à Área da Psicologia</h2>
+      <p>Gerencie pacientes, sessões e conteúdos com facilidade.</p>
+    </section>
+
+    <section class="cards-section">
+      <div class="card" onclick="abrirSecao('agenda')">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Agenda</h3>
+        <p>Visualize e organize suas sessões.</p>
+      </div>
+
+      <div class="card" onclick="abrirSecao('pacientes')">
+        <i class="fas fa-users"></i>
+        <h3>Pacientes</h3>
+        <p>Acesse informações e histórico de atendimentos.</p>
+      </div>
+
+      <div class="card" onclick="abrirSecao('conteudos')">
+        <i class="fas fa-book-open"></i>
+        <h3>Conteúdos</h3>
+        <p>Gerencie materiais e recursos terapêuticos.</p>
+      </div>
+
+      <div class="card" onclick="abrirSecao('relatorios')">
+        <i class="fas fa-chart-line"></i>
+        <h3>Relatórios</h3>
+        <p>Visualize o progresso e desempenho dos atendimentos.</p>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="secao-dinamica"></section>
+  </main>
+
+  <script src="psicologia.js"></script>
+</body>
+</html>
